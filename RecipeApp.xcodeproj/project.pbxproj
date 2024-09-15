@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		031147972C960F05006BE6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031147962C960F05006BE6B5 /* AppDelegate.swift */; };
 		031147992C960F05006BE6B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031147982C960F05006BE6B5 /* SceneDelegate.swift */; };
-		0311479B2C960F05006BE6B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0311479A2C960F05006BE6B5 /* ViewController.swift */; };
 		0311479E2C960F06006BE6B5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0311479D2C960F06006BE6B5 /* Base */; };
 		031147A02C960F07006BE6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0311479F2C960F07006BE6B5 /* Assets.xcassets */; };
 		031147A32C960F07006BE6B5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 031147A22C960F07006BE6B5 /* Base */; };
+		031147AC2C960F31006BE6B5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031147AB2C960F31006BE6B5 /* Recipe.swift */; };
+		031147AF2C960F9A006BE6B5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031147AE2C960F9A006BE6B5 /* NetworkManager.swift */; };
+		031147B22C960FC0006BE6B5 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031147B12C960FC0006BE6B5 /* RecipeViewModel.swift */; };
+		031147B52C960FEE006BE6B5 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031147B42C960FEE006BE6B5 /* RecipeListViewController.swift */; };
+		031147B82C961049006BE6B5 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031147B72C961049006BE6B5 /* RecipeCell.swift */; };
+		031147BB2C9610FC006BE6B5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 031147BA2C9610FC006BE6B5 /* Alamofire */; };
+		031147BE2C961165006BE6B5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 031147BD2C961165006BE6B5 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		031147932C960F05006BE6B5 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		031147962C960F05006BE6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		031147982C960F05006BE6B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0311479A2C960F05006BE6B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0311479D2C960F06006BE6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0311479F2C960F07006BE6B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		031147A22C960F07006BE6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		031147A42C960F07006BE6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		031147AB2C960F31006BE6B5 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		031147AE2C960F9A006BE6B5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		031147B12C960FC0006BE6B5 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		031147B42C960FEE006BE6B5 /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		031147B72C961049006BE6B5 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031147BE2C961165006BE6B5 /* Kingfisher in Frameworks */,
+				031147BB2C9610FC006BE6B5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +70,57 @@
 			children = (
 				031147962C960F05006BE6B5 /* AppDelegate.swift */,
 				031147982C960F05006BE6B5 /* SceneDelegate.swift */,
-				0311479A2C960F05006BE6B5 /* ViewController.swift */,
+				031147B62C961020006BE6B5 /* Views */,
+				031147B32C960FD9006BE6B5 /* Controllers */,
+				031147B02C960FB3006BE6B5 /* ViewModels */,
+				031147AD2C960F46006BE6B5 /* Services */,
+				031147AA2C960F21006BE6B5 /* Models */,
 				0311479C2C960F06006BE6B5 /* Main.storyboard */,
 				0311479F2C960F07006BE6B5 /* Assets.xcassets */,
 				031147A12C960F07006BE6B5 /* LaunchScreen.storyboard */,
 				031147A42C960F07006BE6B5 /* Info.plist */,
 			);
 			path = RecipeApp;
+			sourceTree = "<group>";
+		};
+		031147AA2C960F21006BE6B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				031147AB2C960F31006BE6B5 /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		031147AD2C960F46006BE6B5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				031147AE2C960F9A006BE6B5 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		031147B02C960FB3006BE6B5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				031147B12C960FC0006BE6B5 /* RecipeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		031147B32C960FD9006BE6B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				031147B42C960FEE006BE6B5 /* RecipeListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		031147B62C961020006BE6B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				031147B72C961049006BE6B5 /* RecipeCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +139,10 @@
 			dependencies = (
 			);
 			name = RecipeApp;
+			packageProductDependencies = (
+				031147BA2C9610FC006BE6B5 /* Alamofire */,
+				031147BD2C961165006BE6B5 /* Kingfisher */,
+			);
 			productName = RecipeApp;
 			productReference = 031147932C960F05006BE6B5 /* RecipeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +171,10 @@
 				Base,
 			);
 			mainGroup = 0311478A2C960F05006BE6B5;
+			packageReferences = (
+				031147B92C9610FC006BE6B5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				031147BC2C961165006BE6B5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 031147942C960F05006BE6B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0311479B2C960F05006BE6B5 /* ViewController.swift in Sources */,
 				031147972C960F05006BE6B5 /* AppDelegate.swift in Sources */,
+				031147AF2C960F9A006BE6B5 /* NetworkManager.swift in Sources */,
+				031147B82C961049006BE6B5 /* RecipeCell.swift in Sources */,
 				031147992C960F05006BE6B5 /* SceneDelegate.swift in Sources */,
+				031147B22C960FC0006BE6B5 /* RecipeViewModel.swift in Sources */,
+				031147B52C960FEE006BE6B5 /* RecipeListViewController.swift in Sources */,
+				031147AC2C960F31006BE6B5 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -319,6 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -361,6 +431,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		031147B92C9610FC006BE6B5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		031147BC2C961165006BE6B5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		031147BA2C9610FC006BE6B5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 031147B92C9610FC006BE6B5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		031147BD2C961165006BE6B5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 031147BC2C961165006BE6B5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0311478B2C960F05006BE6B5 /* Project object */;
 }

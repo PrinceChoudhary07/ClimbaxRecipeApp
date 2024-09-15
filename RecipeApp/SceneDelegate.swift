@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  RecipeApp
 //
-//  Created by Abhishek Yadav on 15/09/24.
+//  Created by Prince Ch on 15/09/24.
 //
 
 import UIKit
